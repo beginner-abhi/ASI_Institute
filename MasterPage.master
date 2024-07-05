@@ -1,0 +1,519 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Archaeological Survey of India</title>
+<meta name="google" value="translate">
+<meta name="title" content="The national crafts museum & hastkala academy">
+<meta name="description" content="The national crafts museum & hastkala academy">
+<meta name="language" content="en">
+<meta name="keywords" content="The national crafts museum & hastkala academy">
+
+    <link href="Foundation/css/foundation.min.css" rel="stylesheet" type="text/css" />
+<link rel="shortcut icon" href="Default/assets/front/images/favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.2/css/bootstrapValidator.min.css"/>
+<link href="Default/assets/front/css/bootstrap.min.css" rel="stylesheet">
+<link  href="Default/assets/front/css/style.css" rel="stylesheet">
+<link  href="Default/assets/front/css/responsive.css" rel="stylesheet">
+<script src="Default/assets/front/js/jquery.min.js"></script>
+<script src="Default/assets/front/js/jquery-migrate.min.js"></script>
+<script src="Default/assets/front/js/bootstrap.bundle.min.js"></script>
+<script src="../cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+<link href="Default/assets/front/css/ncm-custom.css" rel="stylesheet">
+ <script type="text/javascript">
+     function googleTranslateElementInit() {
+         new google.translate.TranslateElement({ pageLanguage: 'en', includedLanguages: 'en,hi', layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
+     }
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<style>
+  .error{
+    border: 2px solid #a94442 !important;
+  }
+</style>
+
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+
+<body class="noJS">
+<div id="wrapper">
+    	  <header id="header">
+              <div style="background-color:#504e4e">
+                    <ul class="topLinks">
+          <li><a tabindex="1" href="#content" class="skipContent" title="Skip to Main Content">Skip to Main Content</a></li>
+          <li><a href="" title="Screen Reader Access">Screen Reader Access</a></li>
+          <li class="fontResize">
+            <div id="accessControl" class="d-flex align-items-center">
+              <input type="submit" name="font_normal" value="A-" onClick="return validate();" id="font_normal" title="Decrease Font Size" class="fontScaler">
+              <input type="submit" name="font_large" value="A" onClick="return validate();" id="font_large" title="Normal Font Size" class="fontScaler">
+              <input type="submit" name="font_larger" value="A+" onClick="return validate();" id="font_larger" title="Increase Font Size" class="fontScaler">
+              <input type="submit" name="contrast_normal" value="Standard View" onClick="return false;" id="contrast_normal" accesskey="7" title="Standard View" class="contrastChanger normal">
+              <input type="submit" name="contrast_wob" value="High Contrast View" onClick="return false;" id="contrast_wob" accesskey="8" title="High Contrast View" class="contrastChanger wob ">
+            </div>
+          </li>
+
+          <li class="siteLanguage">
+              
+     <form enctype="multipart/form-data" method="post" accept-charset="utf-8" id="frmlang" name="frmlang" data-bv-message="This value is not valid" data-bv-feedbackicons-valid="glyphicon glyphicon-ok" data-bv-feedbackicons-invalid="glyphicon glyphicon-remove" data-bv-feedbackicons-validating="glyphicon glyphicon-refresh">
+    <div style="display:none;">
+        <input type="hidden" name="_method" value="POST"/>
+        <input type="hidden" name="_csrfToken" aria-autocomplete="off" id="_csrfToken_1719040962.0112" value="2dFjMXlpX4hqua33ovV2AxJXIWi+pNn8UvNSCFzlwyBcNzq/Ts7sRVyVleNf2EtowpHuSZ5JUpoJZW/O1KkKYQ=="/>
+    </div>
+    <div class="languageWrap">
+        <select class="customSelect" name="lang" id="language" title="Select Language">
+            <option selected="selected" title="English" value="en">English</option>
+            <option title="Hindi" value="hi">Hindi</option>
+        </select>
+    </div>
+</form>
+              <div id="google_translate_element" style="display: none;"></div>
+<script type="text/javascript">
+    document.getElementById('language').addEventListener('change', function () {
+        var selectedLanguage = this.value;
+        var translateElement = document.querySelector('#google_translate_element select');
+
+        if (selectedLanguage === 'hi') {
+            translateElement.value = 'hi';
+        } else {
+            translateElement.value = 'en';
+        }
+
+        // Dispatch change event to trigger translation
+        var event = document.createEvent('HTMLEvents');
+        event.initEvent('change', true, true);
+        translateElement.dispatchEvent(event);
+    });
+</script>
+
+
+          </li>
+        </ul>
+              </div>
+  <div class="header-circle"></div>
+  <div class="container" style="padding-top:10px;padding-bottom:10px;">
+    <div class="row align-items-center">
+  
+<div class="col-md-4">
+    <div class="d-flex align-items-center">
+        <a href="index.aspx" class="logo" title="Archaeological Survey of India">
+            <img src="uploads/photos/unnamed.png" alt="Archaeological Survey of India" title="Archaeological Survey of India" width="40">
+        </a>   
+        <a href="index.aspx" class="ms-4 text-decoration-none">Pt. Deendayal Upadhyaya Institute of Archaeology</a>
+    </div>
+</div>
+
+
+      <div class="col-md-8">
+    
+        <div class="d-flex align-items-center justify-content-end rightHeader">
+          <div id="mainNav" class="mainNavigation">
+            <ul id="nav">
+              <li><a href="AboutUs.aspx" title="About Us">About Us</a>
+                <ul>
+                 
+                  <li><a href="AboutUs.aspx" title="History">History</a> </li>
+                  <li><a href="" title="Vision &amp; Mission">Vision &amp; Mission</a> </li>
+                </ul>
+              </li>
+              <li><a href="javascript:void(0);" title="Collection">Collection</a>
+                <ul>
+                  <li><a href="" title="Galleries">Galleries</a></li>
+                  <li><a href="#" title="Virtual Tours">Virtual Tours</a>
+                      <ul>
+                      <li><a href="" title="Tours">Tours</a></li>
+                      
+                      </ul>
+                  </li>
+                
+                  <li><a href="" title="Highlights">Highlights</a></li>
+                
+                </ul>
+              </li>
+              <li><a href="javascript:void(0);" title="Artisan Corner">RTI</a>
+           
+              </li>
+              <li><a href="javascript:void(0);" title="Visitor Corner">FAQ's</a>
+       
+              </li>
+        
+              <li><a href="javascript:void(0);" title="Media">Media</a>
+                <ul>
+                  <li><a href="" title="Events/Exhibitions Activities">Events/Exhibitions Activities</a></li>
+                  
+                  <li><a href="" title="Photo Gallery">Photo Gallery</a></li>
+                  <li><a href="" title="Video Gallery">Video Gallery</a></li>
+                  <li><a href="" title="E-Book Gallery">E-Book Gallery</a></li>
+                </ul>
+              </li>
+              <li><a href="" title="Contact Us">Contact Us</a></li>
+            </ul>
+          </div>
+       
+</div>
+</div>
+        </div>
+      </div>
+              
+</header>
+   
+    <form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+   
+
+
+              <footer id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 footerLeft">
+        <div class="row">
+          <div class="col-md-4">
+        
+       
+                <div class="col-md-3">
+                  <div class="d-flex align-items-center">
+         <span class="logo me-4" title="Archaeological Survey of India">
+              <img src="uploads/photos/unnamed.png" alt="Archaeological Survey of India" title="Archaeological Survey of India" width="40"  style="width:60px";>
+            </span>
+          <a href="index.aspx" class="logo" title="Archaeological Survey of India">
+           Pt. Deendayal Upadhyaya Institute of Archaeology
+            </a>   
+          </div>
+              </div>
+                        <div class="footer-address" style="margin-top:0px;">
+              <p><img src="Default/assets/front/images/map.png" alt="Address"> FF4W+447, Galgotias University Road,<br> Noida-Greater Noida Expy,<br> Knowledge Park II, <br>Greater Noida, <br>Uttar Pradesh 201310</p>            </div><br>
+            <div class="footer-address">
+                <br>
+              <p><img src="Default/assets/front/images/phone.png" alt="mobile">+91-11-26562122/25/33/44, 26567373, 26962819</p>            </div>
+          </div>
+        <%--  <div class="col-md-3 f-second">
+            <div class="footer-section">
+              <h2 class="accHandle">Entry</h2>
+              <ul class="accDetail">
+                (Audio Guide Included)              </ul>
+            </div>
+            <div class="footer-section mt-5">
+              <h2 class="accHandle">Timing</h2>
+              <ul class="accDetail">
+                <li class="timing"><i class="fa fa-clock-o"><span class="displayNone">Time</span></i> Tuesday to Sunday<br>10:00 am to 6:00 pm</li>              </ul>
+            </div>
+          </div>--%>
+          <div class="col-md-4" style="margin-left:30px">
+            <div class="footer-section">
+              <h2 class="accHandle">Footer menu</h2>
+              <ul class="accDetail">
+                                  <li><a href="" title="Career">Career</a></li>
+                                  <li><a href="" title="Notice">Notice</a></li>
+                                  <li><a href="" title="Recruitment Rules">Recruitment Rules</a></li>
+                                  <li><a href="" title="Tenders">Tenders</a></li>
+                                  <li><a href="" title="Employees Corner">Employees Corner</a></li>
+                              </ul>
+            </div>
+          </div>
+          
+              <div class="col-md-3 footerRight" >
+        <div class="frTop">
+          <div> <span class="follow-title">FOLLOW US</span>
+            <ul class="footer-social">
+                                                    <li><a title="Facebook" target="_blank" href="https://www.facebook.com/"> <i class="fa fa-facebook"><span class="displayNone">Facebook</span></i></a></li>
+                                                                      <li><a title="Twitter" target="_blank" href="https://twitter.com/"> <i class="fa fa-twitter"><span class="displayNone">Twitter</span></i></a></li>
+                                                                      <li><a title="YouTube" target="_blank" href="https://www.youtube.com/"> <i class="fa fa-youtube"><span class="displayNone">YouTube</span></i></a></li>
+                                                                      <li><a title="Pinterest" target="_blank" href="https://www.pinterest.com/"> <i class="fa fa-digg"><span class="displayNone">Pinterest</span></i></a></li>
+                                                                      <li><a title="Instagram" target="_blank" href="https://www.instagram.com/"> <i class="fa fa-instagram"><span class="displayNone">Instagram</span></i></a></li>
+                                                                      <li><a title="Linkedin" target="_blank" href="https://www.linkedin.com/"> <i class="fa fa-linkedin"><span class="displayNone">Linkedin</span></i></a></li>
+                                            </ul>
+          </div>
+         <%-- <div class="footer-logo">
+                          <a title="http://india.gov.in, The National Portal of India : External website that opens in a new window" target="_blank" href="http://india.gov.in/"><img src="uploads/footer_logos/164933017099india.png" alt="http://india.gov.in/, http://india.gov.in, The National Portal of India : External website that opens in a new window" /></a>
+                          <a title="https://www.mygov.in, MyGov.in | MyGov: A Platform for Citizen Engagement towards Good Governance in : External website that opens in a new window" target="_blank" href="https://www.mygov.in/"><img src="uploads/footer_logos/164933018590mygov.png" alt="https://www.mygov.in, https://www.mygov.in, MyGov.in | MyGov: A Platform for Citizen Engagement towards Good Governance in : External website that opens in a new window" /></a>
+                          <a title="http://texmin.nic.in/, Ministry of Textile : External website that opens in a new window" target="_blank" href="http://texmin.nic.in/"><img src="uploads/footer_logos/164933019770textiles.png" alt="http://texmin.nic.in/, http://texmin.nic.in/, Ministry of Textile : External website that opens in a new window" /></a>
+                      </div>
+        </div>
+        <div class="frBottom">
+          <div class="subscribe">
+            <div class="subscribeNewslettersForm">
+              <form enctype="multipart/form-data" method="post" accept-charset="utf-8" id="newsletter" name="newsletter" data-bv-message="This value is not valid" data-bv-feedbackicons-valid="glyphicon glyphicon-ok" data-bv-feedbackicons-invalid="glyphicon glyphicon-remove" data-bv-feedbackicons-validating="glyphicon glyphicon-refresh"><div style="display:none;"><input type="hidden" name="_method" value="POST"/><input type="hidden" name="_csrfToken" autocomplete="off" id="_csrfToken_1719040962.0115" value="2dFjMXlpX4hqua33ovV2AxJXIWi+pNn8UvNSCFzlwyBcNzq/Ts7sRVyVleNf2EtowpHuSZ5JUpoJZW/O1KkKYQ=="/></div>              <div class="form-group mb-0">
+                <label>Subscribe to Newsletter</label>
+                <div class="form-control-wrap">
+                  <label for="subscribed_email" class="displayNone">Enter your E-Mail</label>
+                  <input type="email" autocomplete="off" class="form-control" placeholder="Enter your E-Mail" name="subscribed_email" id="subscribed_email">
+                  <div class="errorMessage" id="error_msg" style="display:none;"></div>
+                  <input name="SubmitForm" type="submit" id="subscribed_btn" value="Submit" class="button">
+                  <div class="scaptchamain">
+                    <div class="form-group">
+                      <div class="sdefaultCaptcha scaptcha">
+                        <label for="scaptchatext" class="displayNone">Please enter a value</label>
+                        <input data-bv-notempty-message="Please enter a value" type="text" autocomplete="off" maxlength="5" class="form-control" name="scaptchatext" id="scaptchatext" required />
+                        <div class="scaptchaImg">
+                          <img class="scaptcha" id="scaptcha" src="admin/ajax/sgenerateCaptcha.png" alt="Recapcha Image">
+                        </div>
+                        <span class="scaptcha-s fa fa-refresh" onclick="srefreshcaptcha();"></span>
+                        <!-- <div style="width: 100px;" class="float-left ml-2"></div> -->
+                      </div>
+                    </div>
+                    <div class="errorcaptchaMessage" id="error_captchmsg" style="display:none;"></div>
+                  </div>
+                  <div class="successMessage" style="display: none;"></div>
+                </div>
+              </div>
+              </form>
+            </div>
+          </div>--%>
+        </div>
+      </div>
+        </div>
+      </div>
+    
+      <div class="col-12">
+        <div class="copyright">
+          <div class="row">
+      <%--      <div class="col-12">
+              <ul class="footerLinks">
+  <li><a href="" title="Sitemap">Sitemap</a></li>
+  <li><a href="" title="Terms & Conditions">Terms & Conditions </a></li>
+  <li><a href="" title="Privacy Policy">Privacy Policy </a></li>
+  <li><a href="" title="Copyright Policy">Copyright Policy </a></li>
+  <li><a href="" title="Hyperlinking Policy">Hyperlinking Policy </a></li>
+  <li><a href="" title="Help">Help </a></li>
+</ul>            </div>--%>
+            <div class="col-lg-7 copyrightText">
+              Copyright © 2024 Archaeological Survey of India. All Rights Reserved. 
+            </div>
+                    <%--      <div class="col-lg-5 visitor"><span>Last Updated: 06-02-2024</span>| Visitors :
+                <span class="totalVisitor">totalVisitor</span>
+              </div--%>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>    
+            <script>
+                var task = '';
+                var langmsg = "This page transalating language. Do you want to continue?";
+                $('select[class="customSelect"]').change(function (e) {
+                    e.preventDefault();
+                    smoke.confirm(langmsg, function (e) {
+                        if (e) {
+                            $("#frmlang").submit();
+                        }
+                    }, {
+                        ok: "Yes",
+                        cancel: "No",
+                        classname: "custom-class",
+                        reverseButtons: true
+                    });
+                });
+                var msg = "You are about to proceed to an external website. Click Yes to proceed.";
+                //External website popup
+                $('a').not(".litebox, .singleVideoPopup, .colorbox, .popup-youtube").filter(function () {
+                    return this.hostname && this.hostname !== location.hostname;
+                }).click(function (e) {
+                    e.preventDefault();
+                    var url = $(this).attr("href");
+                    smoke.confirm(msg, function (e) {
+                        if (e) {
+                            window.open(url, "_blank");
+                        } else {
+                            return false;
+                        }
+                    }, {
+                        ok: "Yes",
+                        cancel: "No",
+                        classname: "custom-class",
+                        reverseButtons: true
+                    });
+                });
+
+                $('#newsletter,#scaptchatext').keyup(function () {
+                    $('#subscribefrm').hide();
+                });
+                $.validator.addMethod("alphanumerics", function (value, element) {
+                    return this.optional(element) || /^\w+$/i.test(value);
+                });
+                $('#search_data').validate({
+                    rules: {
+                        search_value: {
+                            required: true,
+                            minlength: 3,
+                        },
+                    },
+                    errorPlacement: function () {
+                        return false;
+                    },
+                });
+                // $('#newsletter').validate({
+                //   rules: {
+                //     subscribed_email: {
+                //       required: true,
+                //       email: true
+                //     },
+                //     scaptchatext: {
+                //       required: true,
+                //       minlength: 5,
+                //       maxlength: 5
+                //     }
+                //   },
+                //   errorPlacement: function() {
+                //     return false;
+                //   },
+                //   submitHandler: function() {
+                //     $("#subscribed_btn").prop("disabled", true);
+                //     var subscribed_email = $("#subscribed_email").val();
+                //     var captchatext = $("#scaptchatext").val();
+                //     var token = $("input[name=_csrfToken]").val();
+                //     var url = 'http://nationalcraftsmuseum.nic.in/ajax/subscribe';
+                //     $.ajax({
+                //       type: 'POST',
+                //       url: url,
+                //       data: {
+                //         subscribed_email: subscribed_email,
+                //         captchatext: captchatext,
+                //         task: "save"
+                //       },
+                //       beforeSend: function(xhr) {
+                //         xhr.setRequestHeader('X-CSRF-Token', token);
+                //         $('#subscribed_btn').html('<i class="fa fa-spinner fa-spin"></i> Processing')
+                //           .attr('disabled', 'disabled').css('cursor', 'not-allowed');
+                //       },
+                //       success: function(result) {
+                //         $('#subscribed_btn').html('Submit').removeAttr('disabled').css('cursor', 'pointer');
+                //         if (result.status == 'success') {
+                //           $('#newsletter')[0].reset();
+                //           $('#subscribefrm').show().css("color", "#11a761").html(result.msg);
+                //         } else {
+                //           $('#subscribefrm').show().css("color", "#f76767").html(result.msg);
+                //         }
+                //         $("#subscribed_btn").prop("disabled", false);
+                //       }
+                //     });
+                //   }
+                // });
+                $('#subscribed_btn').click(function (e) {
+                    e.preventDefault()
+                    var subcribed_email = $('#subscribed_email').val();
+                    var scaptchatext = $('#scaptchatext').val();
+                    var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+                    if (subcribed_email.split(' ').join('') == '') {
+                        $('#error_msg').show().html('Email is required');
+                    } else if (scaptchatext.split(' ').join('') == '') {
+                        $('#error_captchmsg').show().html('Captcha is required');
+                    } else if (reg.test(subcribed_email) == false) {
+                        $('#error_msg').show().html('Please enter a valid email address');
+                    } else {
+                        var token = $("input[name=_csrfToken]").val();
+                        var theurl = 'ajax/subscribe.json';
+                        $.ajax({
+                            type: 'POST',
+                            url: theurl,
+                            data: {
+                                subcribed_email: subcribed_email,
+                                scaptchatext: scaptchatext,
+                                task: "save"
+                            },
+                            beforeSend: function (xhr) {
+                                xhr.setRequestHeader('X-CSRF-Token', token);
+                            },
+                            success: function (result) {
+                                srefreshcaptcha();
+                                $('#error_captchmsg').hide();
+                                if (result.status == 'success') {
+                                    $('#error_msg').hide();
+                                    $('#error_captchmsg').hide();
+                                    //$('.successMessage').show().html('You have subscribed for Newsletter successfully');
+                                    $('.successMessage').show().html(result.msg);
+                                    $('#error_msg').hide();
+                                    $('#error_captchmsg').hide();
+                                    $('#subscribed_email').val('');
+                                    $('#scaptchatext').val('');
+                                } else if (result.status == 'error') {
+                                    $('.successMessage').hide();
+                                    $('#error_msg').show().html(result.msg);
+                                    //$('#error_msg').show().html('Email is already subscribed');  
+                                } else if (result.status == 'cerror') {
+                                    $('.successMessage').hide();
+                                    $('#error_captchmsg').show().html(result.msg);
+                                    //$('#error_captchmsg').show().html('Invalid Captcha');  
+                                }
+                            }
+                        });
+                    }
+                });
+                $("#subscribed_email").keyup(function () {
+                    $('.successMessage').hide();
+                    var sub_email = $(this).val();
+                    if (sub_email == '') {
+                        $('#error_msg').show().html('Email is required');
+                    } else {
+                        var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+                        if (reg.test(sub_email) == false) {
+                            $('#error_msg').show().html('Please enter a valid email address');
+                        } else {
+                            $('#error_msg').hide();
+                        }
+                    }
+                });
+
+                function removeitem(index) {
+                    $("#frmedit").bootstrapValidator('destroy');
+                    $('#' + index).remove();
+                    inputinits();
+                    $('#frmedit').bootstrapValidator({
+                        excluded: [':disabled']
+                    });
+                }
+
+                function additem(key, index) {
+                    var token = $("input[name=_csrfToken]").val();
+                    formfields = $("[name^='" + key + "[']").serialize();
+                    formfields = $("[name^='" + key + "']").serialize();
+                    console.log(formfields);
+                    theurl = 'admin/ajax/additem.html';
+                    $.ajax({
+                        type: "POST",
+                        url: theurl,
+                        data: formfields,
+                        beforeSend: function (xhr) {
+                            xhr.setRequestHeader('X-CSRF-Token', token);
+                        }
+                    }).done(function (data) {
+                        $("#frmedit").bootstrapValidator('destroy');
+                        $('#' + index).append(data);
+                        inputinits();
+                        $('#frmedit').bootstrapValidator({
+                            excluded: [':disabled']
+                        });
+                    });
+                }
+                // function newsletterscaptcha()
+                // {
+                //   time = Date.now();
+                //   document.getElementById('newsletterscaptcha').src = '/admin/ajax/getCaptcha?' + time;
+                // }
+                function srefreshcaptcha() {
+                    time = Date.now();
+                    $('.scaptcha').attr('src', '/admin/ajax/sgenerateCaptcha?' + time);
+                    //document.getElementById('scaptcha').src = '/admin/ajax/sgenerateCaptcha?'+time;
+                }
+</script> 
+
+</div>
+    <a href="#top" title="Back to Top" id="backtotop"><i class="fa fa-arrow-up"></i></a>
+<script src="Default/assets/front/js/functions.js"></script>
+<script src="../cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.2/js/bootstrapValidator.min.js"></script>
+<script src="Default/assets/front/js/general.js"></script>
+<script src="Default/assets/front/js/ncm-custom.js"></script>
+</body>
+</html>
